@@ -1,0 +1,14 @@
+.app-header {
+  @apply bg-white shadow py-5 fixed top-0 left-0 w-full z-20;
+}
+
+.app-wrapper {
+  height: calc(100vh - $header-height);
+  top: $header-height;
+  @apply relative overflow-y-auto;
+}
+
+.app-slide-panel {
+  height: calc(100vh - $header-height);
+  @apply relative overflow-y-auto;
+}

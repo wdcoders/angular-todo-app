@@ -1,0 +1,14 @@
+<header class="app-header">
+  <div class="container flex items-center justify-between">
+    <h4 class="font-bold text-xl">Todo Management</h4>
+    <div class="flex gap-3">
+      @if (this.isAuthenticated$| async) {
+      <div class="px-2 font-medium cursor-pointer">Todos</div>
+      <div class="px-2 font-medium cursor-pointer" (click)="onLogout()">Logout</div>
+      }@else {
+      <div class="px-2 font-medium cursor-pointer">Login</div>
+      }
+
+    </div>
+  </div>
+</header>

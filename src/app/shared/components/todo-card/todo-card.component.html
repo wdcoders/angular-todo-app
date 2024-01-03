@@ -1,0 +1,25 @@
+<div class="flex justify-between gap-10 py-5 px-6 cursor-pointer hover:bg-gray-100 relative border-b border-gray-200">
+  <div class="border-l-4 pl-4"
+    [class]="{'border-gray-200': todo.status === 'OPEN','border-blue-100': todo.status === 'PROGRESS', 'border-red-200': todo.status === 'TESTING', 'border-green-200': todo.status === 'DONE'}">
+    <h4 class="font-bold">{{todo.title}}</h4>
+    <p class="text-gray-400 h-6 overflow-y-hidden">{{todo.description}}</p>
+  </div>
+  <div>
+    @if (type === 'OPEN') {
+    <div class="bg-gray-100 border border-gray-500 text-gray-600 text-xs font-medium p-1 px-2 rounded-full">{{type}}
+    </div>
+    }
+    @if (type === 'PROGRESS') {
+    <div class="bg-blue-100 border border-blue-500 text-blue-600 text-xs font-medium p-1 px-2 rounded-full">{{type}}
+    </div>
+    }
+    @if (type === 'TESTING') {
+    <div class="bg-red-100 border border-red-500 text-red-600 text-xs font-medium p-1 px-2 rounded-full">{{type}}
+    </div>
+    }
+    @if (type === 'DONE') {
+    <div class="bg-green-100 border border-green-500 text-green-600 text-xs font-medium p-1 px-2 rounded-full">{{type}}
+    </div>
+    }
+  </div>
+</div>

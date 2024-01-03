@@ -1,0 +1,13 @@
+@if (isOpen) {
+<div class="fixed top-0 right-0 bg-gray-900/60 w-screen h-screen z-30">
+  <div class="absolute right-0 max-w-md bg-white w-screen h-screen shadow" @fadeSlideInRight>
+    <div class="flex relative p-5 justify-between items-center border-b border-gray-200">
+      <h4 class="font-bold text-xl">{{headerText}}</h4>
+      <i class="ri-close-line ri-lg cursor-pointer" (click)="onClosePanel()"></i>
+    </div>
+    <div class="flex flex-col p-5 app-slide-panel">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+}
